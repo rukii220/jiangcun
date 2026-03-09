@@ -12,36 +12,36 @@ import html2canvas from 'html2canvas';
 // --- CONSTANTS ---
 const GAME_ASSETS = {
   bg: {
-    loading: 'https://picsum.photos/seed/jiangcun_loading/1080/1920?blur=10',
-    map: 'https://picsum.photos/seed/jiangcun_map/1080/1920',
-    intro: 'https://picsum.photos/seed/jiangcun_intro/1080/1920',
-    market: 'https://picsum.photos/seed/jiangcun_market/1080/1920?blur=5',
+    loading: 'https://picui.ogmua.cn/s1/2026/03/09/69ae9531cd5e0.webp',
+    map: 'https://picui.ogmua.cn/s1/2026/03/09/69ae92f8432d3.webp',
+    intro: 'https://picui.ogmua.cn/s1/2026/03/09/69ae94b9e8524.webp',
+    market: 'https://picui.ogmua.cn/s1/2026/03/09/69ae929c88f3c.webp',
     scenery: 'https://picsum.photos/seed/jiangcun_scenery_final/800/800', // 蒋村水乡美景 (Picsum)
   },
   sprites: {
     leaf: 'https://cdn-icons-png.flaticon.com/512/892/892917.png',
     ip_character: 'https://cdn-icons-png.flaticon.com/512/4392/4392525.png',
     landmark: 'https://cdn-icons-png.flaticon.com/512/149/149060.png',
-    card_back: 'https://cdn-icons-png.flaticon.com/512/2267/2267911.png',
-    boat: 'https://cdn-icons-png.flaticon.com/512/2905/2905915.png',
-    fish: 'https://cdn-icons-png.flaticon.com/512/2271/2271106.png',
-    shell1: 'https://cdn-icons-png.flaticon.com/512/3504/3504747.png', // 小蚌壳
-    shell2: 'https://cdn-icons-png.flaticon.com/512/3504/3504758.png', // 大河蚌
-    shell3: 'https://cdn-icons-png.flaticon.com/512/3504/3504764.png', // 抛光海蠡壳
-    shell4: 'https://cdn-icons-png.flaticon.com/512/3504/3504770.png', // 蠡壳窗切片
-    shell5: 'https://cdn-icons-png.flaticon.com/512/3504/3504776.png', // 完整的精美蠡壳窗
+    card_back: 'https://picui.ogmua.cn/s1/2026/03/09/69ae9595a27ce.webp',
+    boat: 'https://picui.ogmua.cn/s1/2026/03/09/69aeb2da1a7c9.webp',
+    fish: 'https://picui.ogmua.cn/s1/2026/03/09/69aeb2d670837.webp',
+    shell1: 'https://picui.ogmua.cn/s1/2026/03/09/69aeb2d7817b8.webp', // 小蚌壳
+    shell2: 'https://picui.ogmua.cn/s1/2026/03/09/69aeb2d632392.webp', // 大河蚌
+    shell3: 'https://picui.ogmua.cn/s1/2026/03/09/69aeb2e27a680.webp', // 抛光海蠡壳
+    shell4: 'https://picui.ogmua.cn/s1/2026/03/09/69aeb2e50012e.webp', // 蠡壳窗切片
+    shell5: 'https://picui.ogmua.cn/s1/2026/03/09/69aeb2e693bb6.webp', // 完整的精美蠡壳窗
     cat: 'https://cdn-icons-png.flaticon.com/512/616/616430.png',
     tree: 'https://cdn-icons-png.flaticon.com/512/489/489969.png',
     bench: 'https://cdn-icons-png.flaticon.com/512/2553/2553753.png',
     pot: 'https://cdn-icons-png.flaticon.com/512/628/628283.png',
   },
   foods: [
-    { id: 'f1', name: '蒋村鱼干', img: 'https://picsum.photos/seed/food1/200/200', desc: '选用漾里水系鲜鱼，经传统工艺晾晒而成，咸鲜适口。' },
-    { id: 'f2', name: '漾里鲜笋', img: 'https://picsum.photos/seed/food2/200/200', desc: '清晨采摘的春笋，肉质脆嫩，是水乡春日的馈赠。' },
-    { id: 'f3', name: '水乡米糕', img: 'https://picsum.photos/seed/food3/200/200', desc: '软糯香甜的米糕，承载着几代蒋村人的童年味道。' },
-    { id: 'f4', name: '农家土鸡蛋', img: 'https://picsum.photos/seed/food4/200/200', desc: '散养土鸡产蛋，蛋黄澄红，营养丰富。' },
-    { id: 'f5', name: '秘制酱鸭', img: 'https://picsum.photos/seed/food5/200/200', desc: '蒋村秘方卤制，皮糯肉香，回味悠长。' },
-    { id: 'f6', name: '清蒸白鱼', img: 'https://picsum.photos/seed/food6/200/200', desc: '太湖三白之一，肉质细腻，入口即化。' },
+    { id: 'f1', name: '萝卜丝油墩子', img: 'https://picui.ogmua.cn/s1/2026/03/09/69ae963740010.webp', desc: '萝卜丝油墩子以面糊裹调味萝卜丝用专用铁模热油深炸而成。外皮金黄酥脆，内里萝卜丝清甜多汁。' },
+    { id: 'f2', name: '蒋村臭豆腐', img: 'https://picui.ogmua.cn/s1/2026/03/09/69ae9674112b0.webp', desc: '蒋村臭豆腐采用传统发酵工艺与本地酱料调味，热油现炸。外皮金黄酥脆，内里软嫩多汁。' },
+    { id: 'f3', name: '蒋家漾河虾', img: 'https://picui.ogmua.cn/s1/2026/03/09/69ae969d2a1e4.webp', desc: '蒋家漾河虾肉质紧实鲜甜、干净无泥腥味，多以白灼或油爆做法，最大程度保留河鲜本味，是蒋村水乡极具代表性的时令鲜货' },
+    { id: 'f4', name: '银杏鸡蛋糕', img: 'https://picui.ogmua.cn/s1/2026/03/09/69ae95f6063a8.webp', desc: '银杏鸡蛋糕，是嘉善县天凝镇蒋村村的代表性非遗小吃以村内千年银杏文化冠名。' },
+    { id: 'f5', name: '红烧河鳗', img: 'https://picui.ogmua.cn/s1/2026/03/09/69ae96dc86eae.webp', desc: '红烧河鳗选用鲜活河鳗，以红烧慢炖入味。肉质软糯肥嫩，酱汁浓醇鲜香，营养滋补。' },
+    { id: 'f6', name: '酱爆螺蛳', img: 'https://picui.ogmua.cn/s1/2026/03/09/69ae96ee46fa2.webp', desc: '酱爆螺蛳以鲜活螺蛳为主料，用豆瓣酱、葱姜蒜大火快炒酱香浓郁、鲜辣入味，嗦起来鲜爽过瘾。' },
   ],
   audio: {
     ambient: 'https://www.soundjay.com/nature/river-1.mp3',
@@ -1164,7 +1164,7 @@ export default function App() {
               >
                 <p className="text-lg leading-relaxed font-medium">
                   久在樊笼里，复得返自然。<br/>
-                  <span className="text-sm text-[#8fb0a9] mt-2 block">漾里乡向你发出邀请</span>
+                  <span className="text-sm text-[#8fb0a9] mt-2 block">漾里鲜向你发出邀请</span>
                 </p>
                 <div className="mt-4 text-xs text-gray-400 animate-pulse">点击叶片开启旅程</div>
               </motion.div>
